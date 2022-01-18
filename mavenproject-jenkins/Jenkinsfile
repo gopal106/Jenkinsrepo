@@ -1,0 +1,11 @@
+node
+{ 
+  stage ('SCM checkout')
+  {
+    git 'https://github.com/gopal106/Jenkinsrepo.git'
+  }
+      stage ('compile-Package')
+      sh 'mvn package'
+ }       
+
+}
