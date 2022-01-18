@@ -5,7 +5,8 @@ node
     git 'https://github.com/gopal106/Jenkinsrepo.git'
   }
       stage ('compile-Package')
-      sh 'mvn package'
+      def MVN_Home = tool name: 'MAVEN_HOME', type: 'maven'
+      sh "${MVN_Home}/bin/mvn package"
  }       
 
 }
