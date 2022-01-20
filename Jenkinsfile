@@ -10,7 +10,7 @@ pipeline
      { 
         steps 
 	{ 
-           sh 'npm install' 
+           bat 'npm install' 
         }
      }
      
@@ -18,7 +18,7 @@ pipeline
      { 
         steps 
 	{ 
-           sh 'echo "testing application..."'
+          bat 'echo "testing application..."'
         }
       }
 
@@ -26,7 +26,7 @@ pipeline
 	 { 
          steps 
 	 { 
-           sh 'echo "deploying application..."'
+          bat 'echo "deploying application..."'
          }
 
      }
