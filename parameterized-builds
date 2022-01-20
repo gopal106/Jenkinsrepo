@@ -1,0 +1,11 @@
+properties([[$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], parameters([choice(choices: ['main', 'feature_1'], 
+description: 'Select Branch to Build', name: 'branch')])])
+node
+{
+    stage('Scm Checkout')
+    {
+        echo "Pulling changes from the branch ${params.branch}"
+        git url: 'https://github.com/gopal106/Jenkinsrepo.git', branch: "${params.branch}"
+    }
+    
+}
