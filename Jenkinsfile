@@ -10,7 +10,7 @@ pipeline
      { 
         steps 
 	{ 
-          sh 'make check || true' 
+          bat 'make check || true' 
           junit '**/target/*.xml'
         }
      }
