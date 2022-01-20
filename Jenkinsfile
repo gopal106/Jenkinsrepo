@@ -6,11 +6,12 @@ pipeline
    stages
    {
    
-     stage('Install Dependencies') 
+     stage('Build') 
      { 
         steps 
 	{ 
-           bat 'npm install' 
+          sh 'make check || true' 
+          junit '**/target/*.xml'
         }
      }
      
