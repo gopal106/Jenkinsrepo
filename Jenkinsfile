@@ -6,11 +6,11 @@ pipeline
    stages
    {
    
-     stage('Install Dependencies') 
+     stage("Build") 
      { 
         steps 
 	{ 
-           sh 'npm install' 
+           bat 'echo"build the last application"'
         }
      }
      
@@ -18,7 +18,7 @@ pipeline
      { 
         steps 
 	{ 
-           sh 'echo "testing application..."'
+           bat 'echo "testing the last application..."'
         }
       }
 
@@ -26,7 +26,7 @@ pipeline
 	 { 
          steps 
 	 { 
-           sh 'echo "deploying application..."'
+           bat 'echo "deploying the last application..."'
          }
 
      }
